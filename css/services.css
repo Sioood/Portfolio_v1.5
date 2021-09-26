@@ -1,0 +1,146 @@
+.services {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.services-container {
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-container h2 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-family: var(--first-font-italic);
+  font-size: 5rem;
+}
+
+.services-container-txt {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.services-container-scroll {
+  animation: scrollServices 10s linear infinite;
+}
+
+@keyframes scrollServices {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(0%, -50%);
+  }
+}
+
+.services-container-scroll a {
+  text-decoration: none;
+}
+
+.services-container-scroll .service-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--second-font);
+  font-size: 1.3rem;
+  padding: 0 0 0.5% 0;
+  white-space: nowrap;
+  color: var(--second-color);
+  /* -webkit-text-stroke: 0.3px var(--second-color); */
+  cursor: pointer;
+}
+
+.services-container-scroll .service-list:hover {
+  color: var(--second-color);
+  font-style: oblique;
+}
+
+.services-container-scroll:hover {
+  animation-play-state: paused !important;
+}
+
+.services-container-scroll .service-list::before {
+  display: inline-block;
+  width: 10%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 10px;
+  border-left: 3px solid var(--second-color);
+  font-family: var(--first-font-italic);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  opacity: 0;
+}
+
+.s1::before {
+  content: "001";
+}
+
+.s1:hover::before {
+  opacity: 1;
+}
+
+.s2::before {
+  content: "002";
+}
+
+.s2:hover::before {
+  opacity: 1;
+}
+
+.s3::before {
+  content: "003";
+}
+
+.s3:hover::before {
+  opacity: 1;
+}
+
+.s4::before {
+  content: "004";
+}
+
+.s4:hover::before {
+  opacity: 1;
+}
+
+.s5::before {
+  content: "005";
+}
+
+.s5:hover::before {
+  opacity: 1;
+}
+
+.s6::before {
+  content: "006";
+}
+
+.s6:hover::before {
+  opacity: 1;
+}
+
+@media screen and (orientation: portrait){
+  .services-container h2 {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    font-size: 3rem;
+  }
+  
+
+  .services-container {
+    width: 100%;
+    height: 20%;
+  }
+  
+}

@@ -1,0 +1,213 @@
+.about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: 0;
+  margin-bottom: 10vh;
+}
+
+.about-info {
+  position: absolute;
+  width: 49%;
+  height: 100%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.about-info h1 {
+  padding-top: 10px;
+  font-family: var(--second-font-italic) ;
+  font-size: 1.5rem !important;
+}
+
+.about-info h1::after {
+  content: "Dupont";
+  padding-top: 10px;
+  padding-left: 10px;
+  font-family: var(--first-font-italic);
+  font-size: 1.5rem !important;
+  text-transform: uppercase !important;
+  pointer-events: visible;
+}
+
+.about-info h2 {
+  padding-top: 10px;
+  font-family: var(--second-font-heavy);
+  font-size: 2.9rem !important;
+  text-align: justify;
+  pointer-events: visible;
+  text-transform: uppercase !important;
+}
+
+#h5esperluette {
+  font-family: var(--first-font-italic);
+}
+
+.about-info p {
+  padding-top: 20px;
+  font-family: var(--second-font-italic) !important;
+  font-size: 1.5rem;
+  pointer-events: visible;
+  text-transform: uppercase !important;
+}
+
+.about-btn-contact {
+  padding-top: 30px;
+  padding-left: 0%;
+  background: transparent;
+}
+
+.about-btn-contact button {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid var(--second-color);
+  font-family: var(--second-font-medium);
+  overflow: hidden;
+  pointer-events: visible;
+  cursor: pointer;
+}
+
+.about-btn-contact button a {
+  text-decoration: none;
+}
+
+.about-btn-contact button:hover {
+  font-style: oblique;
+}
+
+.about-btn-contact button:active {
+  transform: scale(0.95);
+  transition-duration: 0.2s;
+}
+
+.about-img {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  right: 5%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-img,
+img {
+  opacity: 100%;
+}
+
+.arrow-scroll img {
+  position: absolute;
+  width: 12.5px;
+  display: block;
+  bottom: 10%;
+  left: 0.5%;
+  animation: arrow-scroll 2s ease-in-out infinite;
+}
+
+@keyframes arrow-scroll {
+  0% {
+    transform: translate(0%, 0%);
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: translate(0%, 50%);
+  }
+  50% {
+    transform: translate(0%, 25%);
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: translate(0%, 50%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+    transform: rotateY(0deg);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .about {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .about-info {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    text-align: left;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .about-container-left h1 {
+    padding-top: 10px;
+    color: var(--second-color);
+    font-family: var(--second-font-medium-italic);
+    /* font-size: 12px; */
+  }
+
+  .about-info h1::after {
+    content: "Dupont";
+    padding-top: 10px;
+    padding-left: 10px;
+    color: var(--second);
+    font-family: var(--first-font-italic);
+    /* font-size: 12px; */
+    text-transform: uppercase !important;
+    pointer-events: visible;
+  }
+
+  .about-info h2 {
+    padding-top: 10px;
+    /* font-size: 40px !important; */
+  }
+
+  #h2esperluette {
+    font-family: var(--first-font-italic) !important;
+    padding-left: 50%;
+  }
+
+  .about-info p {
+    padding-top: 20px;
+    color: var(--second);
+    font-family: var(--second-font-medium-italic);
+    /* font-size: 16px; */
+    pointer-events: visible;
+    text-transform: uppercase !important;
+  }
+
+  .about-img {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 15%;
+    right: 5%;
+    overflow: hidden;
+  }
+
+  .arrow-scroll img {
+    position: absolute;
+    width: 12.5px;
+    display: block;
+    bottom: 0%;
+    left: 90.5%;
+    animation: arrow-scroll 2s ease-in-out infinite;
+  }
+}

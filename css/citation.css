@@ -1,0 +1,60 @@
+.citation {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.citation-scroll{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.citation-scroll-txt{
+  color: var(--second-color);
+  font-family: var(--first-font-italic);
+  font-size: 7rem;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#citation-portrait{
+  display: none;
+}
+
+.citation-portrait{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.citation-portrait-txt{
+  color: var(--second-color);
+  font-family: var(--first-font-italic);
+  font-size: 6rem;
+  white-space: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (orientation : portrait) {
+  #citation-scroll{
+    display: none  !important;
+  }
+
+  #citation-portrait{
+    display: flex !important;
+  }
+  
+}
