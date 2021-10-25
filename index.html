@@ -150,7 +150,9 @@
         </p>
         <div class="about-btn-contact">
           <button onclick="location.href='#contact'" id="about-btn-contact">
-            <a href="#contact">Contactez-moi</a>
+            <a href="#contact" data-splitbee-event="Contact CTA"
+              >Contactez-moi</a
+            >
           </button>
 
           <div class="arrow-scroll">
@@ -408,6 +410,11 @@
 
     <!-- script -->
     <script src="js/app.js"></script>
+
+    <!-- splitbee script -->
+    <script type="text/javascript">
+      splitbee.track("Contact CTA");
+    </script>
 
     <!-- Custom cursor -->
 
